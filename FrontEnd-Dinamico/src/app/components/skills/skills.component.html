@@ -1,1 +1,66 @@
-<p>skills works!</p>
+  <!--Aptitudes-->
+<header class="card">
+  <div class="container-fluid">
+    <!--Titulo hard & soft skills-->
+    <div class="row">
+      <div class="col">
+        <h1>Hard & soft skills</h1>
+      </div>
+    </div>
+
+    <ul>
+      <!--Progressbar resolucion de problemas-->
+      <li>
+        <div class="row justify-content-end">
+          <div class="col-7">
+            <p>Resolucion de problemas</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-end">
+          <div class="col-6">
+            <div class="progress">
+              <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width: 75%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            
+          </div>
+          <div class="col-3">
+              <a href="#">
+                <img style="width: 30px;" [src]="miPortafolio.edit" alt="edicion">
+              </a>
+              <a href="#">
+                <img [src]="miPortafolio.delete" alt="delete">
+              </a>
+          </div>
+        </div>
+      </li>
+
+      <!--Progressbar analisis de sistemas-->
+      <li>
+        <div class="row justify-content-end">
+          <div class="col-7">
+            <p>Analisis de sistemas</p>
+          </div>
+        </div>
+        
+        <div class="row justify-content-end">
+          <div class="col-6">
+            <div class="progress">
+              <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width: 30%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            
+          </div>
+          <div class="col-3">
+              <a href="#">
+                <img style="width: 30px;" [src]="miPortafolio.edit" alt="edicion">
+              </a>
+              <a href="#">
+                <img [src]="miPortafolio.delete" alt="delete">
+              </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    
+  </div>
+</header>

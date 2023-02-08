@@ -1,0 +1,20 @@
+#navegacion{
+    height: 60px;
+    background-color: blueviolet;
+    padding-top: 10px;
+}
+#logo_arg_programa{
+    height: 40px;
+}
+body{
+    background-image:url(./assets/sunset-1373171_1920.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    color:black;
+}
+.row{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}

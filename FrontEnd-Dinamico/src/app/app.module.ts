@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { NavegacionComponent } from './components/navegacion/navegacion.component';
 import { EncabezadoComponent } from './components/encabezado/encabezado.component';
 import { AboutComponent } from './components/about/about.component';
-import { ExperienciasComponent } from './components/experiencias/experiencias.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,14 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
     NavegacionComponent,
     EncabezadoComponent,
     AboutComponent,
-    ExperienciasComponent,
     SkillsComponent,
     ProyectosComponent,
     ExperienciaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

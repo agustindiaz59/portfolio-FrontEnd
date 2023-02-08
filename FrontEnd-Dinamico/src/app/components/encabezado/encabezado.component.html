@@ -1,1 +1,70 @@
-<p>encabezado works!</p>
+<!--Encabezado-->
+<header class="card">
+
+    <!--foto de portada-->
+    <div>
+        <img class="card-img-top" [src]="miPortafolio.backImage" alt="banner">
+    </div>
+
+    <!--foto de perfil-->
+    <div id="foto-de-perfil" class="d-flex align-items-end">
+
+        <img style="width: 100%; border-radius: 50%;" [src]="miPortafolio.profileImage" alt="foto_de_perfil">
+        <a href="#">
+          <img style="width: 30px;" [src]="miPortafolio.edit" alt="edicion">
+        </a>
+        
+    </div>
+
+    <!--info de presentacion-->
+    <div class="container-fluid">
+      <div class="row">
+
+        <div style="text-align: left;" class="col">
+          <h1>{{miPortafolio.name}}</h1>
+          <p>{{miPortafolio.orientacion}}<br>
+            {{miPortafolio.ubicacion}}
+            <a href="#">info de contacto</a>
+          </p>
+        </div>
+
+        <div style="text-align: right;" class="col">
+            <ul id="listas">
+              <li><!--insertar foto-->{{miPortafolio.institucion}}</li>
+              <li><!--insertar foto-->INTI</li>
+            </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!--botones de intereses-->
+    <div class="row">
+        <div style="margin: 5px 0 5px 5px;" class="col">
+          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Tengo interes en:
+          </button>
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Mis intereses</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  {{miPortafolio.intereses}}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Genial entendido!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <button class="btn btn-light">Añadir seccion</button>
+          <button class="btn btn-light">Más</button>
+        </div>
+    </div>
+
+</header>
