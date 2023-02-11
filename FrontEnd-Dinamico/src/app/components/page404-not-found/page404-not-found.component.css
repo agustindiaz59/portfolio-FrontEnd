@@ -1,0 +1,8 @@
+body{
+    font-family: 'open sans';
+    font-style: oblique;
+    font-size: 80px;
+    color: black;
+    text-shadow:4px 4px 6px white;
+    padding: 50px 0 50px 0;
+}

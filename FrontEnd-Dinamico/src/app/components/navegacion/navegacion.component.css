@@ -1,0 +1,22 @@
+#navegacion{
+    height: 60px;
+    background-color: blueviolet;
+}
+#logo_arg_programa{
+    height: 45px;
+}
+#navbarSupportedContent{
+    background-color: blueviolet;
+}
+.lista{
+    margin: 3px;
+    padding-left: 3%;
+    border-style: solid;
+    border-color: rgb(107, 29, 180);
+    border-width: 1px;
+    border-radius: 10px;
+}
+.social{
+    height: 40px;
+    margin: 5px;
+}

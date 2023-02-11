@@ -11,6 +11,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
+import { Page404NotFoundComponent } from './components/page404-not-found/page404-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     SkillsComponent,
     ProyectosComponent,
-    ExperienciaComponent
+    ExperienciaComponent,
+    FooterComponent,
+    Page404NotFoundComponent
   ],
   imports: [
     BrowserModule,

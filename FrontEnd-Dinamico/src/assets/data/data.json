@@ -1,9 +1,10 @@
 {   
-        "name": "Matias Agustin Muro Diaz",
+        "nombre": "Matias Agustin Muro Diaz",
         "ubicacion":"Bella Vista, Tucuman (Argentina)",
         "institucion":"Escuela Tecnica N°1, Bella Vista",
         "info":"Tengo 20 años, recibido de escuela tecnica orientacion en equipos e instalaciones electromecanicas",
-        
+        "encabezado":"Hola! soy matias y este es mi portfolio, lo invito a darse un paseo para conocer mejor mis habilidades, si quiere contactarme encontrara mis redes sociales en la barra de navegacion",
+
         "trabajos":[
             "Fullstack developer"
         ],
@@ -25,5 +26,6 @@
         "instagram": "../assets/logo_instagram.svg",
         "whatsapp": "../assets/logo_whatsapp.svg",
         "delete": "../assets/trash3.svg",
-        "add": "../assets/plus-lg.svg"
+        "add": "../assets/plus-lg.svg",
+        "logoHtml":"../assets/pngwing.com.png"
     }
