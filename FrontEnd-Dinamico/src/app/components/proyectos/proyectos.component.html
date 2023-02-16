@@ -1,0 +1,44 @@
+<header class="card">
+
+  <div class="container-fluid">
+
+    <!--titulo proyectos-->
+    <div class="row">
+      <div class="col">
+        <h1>Proyectos</h1>
+      </div>
+      <div id="boton-agregar" class="col">
+        <a href="#">
+          <img style="width: 30px;" [src]="miPortafolio.add" alt="add">
+        </a>
+      </div>
+    </div>
+
+    <!--lista de proyectos-->
+    <ul>
+      <li>
+        <div class="row">
+          <div class="col-1">
+            <!--insertar foto-->
+          </div>
+          
+          <div class="col">
+            <a style="text-decoration: none;" href="#"><h2>Portafolio web estatico</h2></a>
+            <p>Argentina programa #YoProgramo</p>
+          </div>
+  
+          <div id="editar-o-eliminar" class="col">
+            <a href="#">
+              <img style="width: 30px;" [src]="miPortafolio.edit" alt="edicion">
+            </a>
+            <a href="#">
+              <img [src]="miPortafolio.delete" alt="delete">
+            </a>
+          </div>
+  
+        </div>
+      </li>
+    </ul>
+    
+  </div>
+</header>

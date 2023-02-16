@@ -1,0 +1,84 @@
+  <!--Agregar fotos de escuelas-->
+<header class="card">
+  <div style="margin: 5px;" class="container-fluid">
+    <!--titulo de experiencias-->
+    <div class="row">
+      <div class="col">
+        <h1>Experiencia</h1>
+      </div>
+      <div id="boton-agregar" class="col">
+        <a href="#">
+          <img style="width: 30px;" [src]="miPortafolio.add" alt="add">
+        </a>
+      </div>
+    </div>
+
+    <!--lista de experiencia-->
+    <ul>
+      <li  *ngFor="let elemento of miPortafolio.trabajos; let i = index">
+        <div class="row">
+
+          <div class="col-1">
+            <!--insertar foto-->
+          </div>
+
+          <div class="col">
+            <h2>{{elemento}}</h2>
+            <p>{{miPortafolio.description[i].cuerpo}}</p> <!--Aqui podria  sacar el .cuerpo y poner una lista igual a la de trabajos, lo dejo como dos maneras distintas de escribir un json-->
+          </div>
+
+          <div id="editar-o-eliminar" class="col">
+            <a href="#">
+              <img style="width: 30px;" [src]="miPortafolio.edit" alt="edicion">
+            </a>
+            <a href="#">
+              <img [src]="miPortafolio.delete" alt="delete">
+            </a>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+    
+    <!--titulo de educacion-->
+    <div class="row">
+      <div class="col">
+        <h1>Educacion</h1>
+      </div>
+      <div id="boton-agregar" class="col">
+        <a href="#">
+          <img style="width: 30px;" [src]="miPortafolio.add" alt="add">
+        </a>
+      </div>
+    </div>
+
+    <!--lista de educacion-->
+    <ul>
+
+      <li>
+        <div class="row">
+
+          <div class="col-1">
+            <!--insertar foto-->
+          </div>
+
+          <div class="col">
+            <h2>{{miPortafolio.institucion}}</h2>
+            <p>{{miPortafolio.orientacion}}</p>
+          </div>
+
+          <div id="editar-o-eliminar" class="col">
+            <a href="#">
+              <img style="width: 30px;" [src]="miPortafolio.edit" alt="edicion">
+            </a>
+            <a href="#">
+              <img [src]="miPortafolio.delete" alt="delete">
+            </a>
+          </div>
+
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</header>
