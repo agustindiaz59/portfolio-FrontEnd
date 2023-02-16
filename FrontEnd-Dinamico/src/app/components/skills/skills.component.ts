@@ -1,24 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonService } from 'src/app/services/common.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
-export class SkillsComponent implements OnInit{
+export class SkillsComponent {
 
-  miPortafolio: any ;
-
-  constructor( private common:CommonService, ){}
-
-  ngOnInit():void{
-    this.common.obtenerDatos().subscribe(data =>
-      {
-        console.log(data);
-        this.miPortafolio = data;
-      }
-      
-    );
-  }
 }
