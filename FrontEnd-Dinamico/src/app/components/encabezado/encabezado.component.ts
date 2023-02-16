@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { Component, OnInit } from "@angular/core";
 import { CommonService } from "src/app/services/common.service";
+=======
+import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/services/common.service';
+>>>>>>> 623e530b88a894d879ddb01cd58597195d6ed51d
 
 @Component({
   selector: 'app-encabezado',

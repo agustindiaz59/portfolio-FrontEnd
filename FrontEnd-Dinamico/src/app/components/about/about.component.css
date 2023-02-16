@@ -1,0 +1,20 @@
+section{
+    background-image: url(../../../assets/poetry-album-4922763_1280.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    height: 7in;
+    width: 100%;
+    font-family: 'open sans';
+}
+h1{
+    font-style: oblique;
+    font-size: 80px;
+    color: white;
+    text-shadow:4px 4px 6px black;
+}
+h3{
+    font-style: oblique;
+    color: white;
+    text-shadow:4px 4px 6px black;
+}

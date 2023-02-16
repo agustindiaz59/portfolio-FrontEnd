@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
 .card{
     margin: 10px;
@@ -27,4 +28,10 @@ ul{
 }
 li{
     list-style: none;
+=======
+html,body{
+    font-family:'Open Sans', sans-serif;
+    margin: 0;
+    height: 100%;
+>>>>>>> 623e530b88a894d879ddb01cd58597195d6ed51d
 }
