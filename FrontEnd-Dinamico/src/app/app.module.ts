@@ -6,16 +6,15 @@ import { AppComponent } from './app.component';
 import { NavegacionComponent } from './components/navegacion/navegacion.component';
 import { EncabezadoComponent } from './components/encabezado/encabezado.component';
 import { AboutComponent } from './components/about/about.component';
-import { ExperienciasComponent } from './components/experiencias/experiencias.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
-<<<<<<< HEAD
-import { HttpClientModule } from '@angular/common/http';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { Page404NotFoundComponent } from './components/page404-not-found/page404-not-found.component';
-=======
->>>>>>> parent of e26ed1f (Cuarto commit, primera version estable de portfolio)
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,16 +22,19 @@ import { Page404NotFoundComponent } from './components/page404-not-found/page404
     NavegacionComponent,
     EncabezadoComponent,
     AboutComponent,
-    ExperienciasComponent,
+    ExperienciaComponent,
     SkillsComponent,
     ProyectosComponent,
     ExperienciaComponent,
     FooterComponent,
-    Page404NotFoundComponent
+    Page404NotFoundComponent,
+    PortfolioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

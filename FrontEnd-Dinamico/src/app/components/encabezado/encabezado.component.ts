@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
-import { CommonService } from 'src/app/services/common.service';
-=======
-import { Component } from '@angular/core';
->>>>>>> parent of e26ed1f (Cuarto commit, primera version estable de portfolio)
+import { Component, OnInit } from "@angular/core";
+import { CommonService } from "src/app/services/common.service";
 
 @Component({
   selector: 'app-encabezado',
@@ -12,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class EncabezadoComponent implements OnInit{
 
+  miPortafolio: any ;
+
+  constructor( private common:CommonService, ){}
+
+  ngOnInit():void{
+    this.common.obtenerDatos().subscribe(data =>
+      {
+        console.log(data);
+        this.miPortafolio = data;
+      }
+      
+    );
+  }
 }

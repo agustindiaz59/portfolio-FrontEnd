@@ -1,25 +1,32 @@
-<<<<<<< HEAD
-<section>
-  <div style="height: 600px;width: 100%;" class="d-flex align-items-center">
-    <div class="container-fluid text-center">
-      <div class="row">
-        <div class="col">
-          <h1>Acerca de mi</h1>
-        </div>
+  <!--Agregar fotos de lista de instituciones-->
+<header class="card">
+  
+  <div style="margin: 5px;" class="container-fluid">
+    <!--titulo acerca de mi-->
+    <div class="row">
+      <div class="col">
+        <h1>Acerca de mi</h1>
       </div>
-      <div style="margin-top: 100px;" class="row">
-        <div class="col">
-          <h3>
-            Me presento,
-             mi nombre es Matias Agustin Muro Diaz y
-              soy tecnico en equipos e instalaciones electromecanicas
-               y desarrollador fullstack
-          </h3>
-        </div>
+      <div id="boton-agregar" class="col">
+        <a href="#">
+          <img style="width: 30px;" [src]="miPortafolio.add" alt="add">
+        </a>
+      </div>
+    </div>
+
+    <!--info acerca de mi-->
+    <div class="row">
+      <div class="col">
+        <p>{{miPortafolio.info}}</p>
+      </div>
+      <div id="editar-o-eliminar" class="col">
+        <a href="#">
+          <img style="width: 30px;" [src]="miPortafolio.edit" alt="edicion">
+        </a>
+        <a href="#">
+          <img [src]="miPortafolio.delete" alt="delete">
+        </a>
       </div>
     </div>
   </div>
-</section>
-=======
-<p>about works!</p>
->>>>>>> parent of e26ed1f (Cuarto commit, primera version estable de portfolio)
+</header>

@@ -1,18 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './components/about/about.component';
-import { EncabezadoComponent } from './components/encabezado/encabezado.component';
-import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { LoginComponent } from './components/login/login.component';
 import { Page404NotFoundComponent } from './components/page404-not-found/page404-not-found.component';
-import { ProyectosComponent } from './components/proyectos/proyectos.component';
-import { SkillsComponent } from './components/skills/skills.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 const routes: Routes = [
-  {path:"inicio",component:EncabezadoComponent},
-  {path:"about",component:AboutComponent},
-  {path:"experiencia",component:ExperienciaComponent},
-  {path:"proyectos",component:ProyectosComponent},
-  {path:"skills",component:SkillsComponent},
+  {path:"/inicio",component:PortfolioComponent},
+  {path:"/login", component:LoginComponent},
   {path: '', redirectTo: '/inicio', pathMatch: 'full' },
   {path:"**", component:Page404NotFoundComponent}
 ];
