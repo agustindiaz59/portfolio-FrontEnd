@@ -5,8 +5,8 @@ import { Page404NotFoundComponent } from './components/page404-not-found/page404
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 const routes: Routes = [
-  {path:"/inicio",component:PortfolioComponent},
-  {path:"/login", component:LoginComponent},
+  {path:"inicio",component:PortfolioComponent},
+  {path:"login", component:LoginComponent},
   {path: '', redirectTo: '/inicio', pathMatch: 'full' },
   {path:"**", component:Page404NotFoundComponent}
 ];
