@@ -1,7 +1,4 @@
 Repositorio FrontEnd para argentina programa
 
-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
-<<<<<<< HEAD
-aspomafpnafsm
-=======
->>>>>>> 623e530b88a894d879ddb01cd58597195d6ed51d
+Buenas! aqui se encuentra el FrontEnd que hice para #YoProgramo.
+El mismo integra HTML, CSS, JSON, y Angular en el caso del maquetado dinamico, tambien agregué una nueva relase ya que esta es la segunda version estable de mi portfolio
