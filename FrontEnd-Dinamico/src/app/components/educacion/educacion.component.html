@@ -1,0 +1,35 @@
+<div style="margin: 5px;" class="container-fluid">
+    <!--titulo de educacion-->
+    <div class="row">
+        <div class="col">
+          <h1>Educacion</h1>
+        </div>
+        <div id="boton-agregar" class="col">
+          <a href="#">
+            <img style="width: 30px;" src="../assets/plus-lg.svg" alt="add">
+          </a>
+        </div>
+    </div>
+    
+    <!--lista de educacion-->
+    <ul>
+        <li *ngFor="let num of miPortafolio.educacion;let i = index">
+          <div class="row">
+
+            <div class="col-1">
+              <img src="../assets/plus-lg.svg" alt="fotoescuela">
+            </div>
+
+            <div class="col">
+              <h2>{{miPortafolio.educacion[i].escuela}}</h2>
+              <p>{{miPortafolio.educacion[i].carrera}} {{miPortafolio.educacion[i].inicio}}-{{miPortafolio.educacion[i].fin}}</p>
+            </div>
+
+            <div id="editar-o-eliminar" class="col">
+              <app-edicion></app-edicion>
+            </div>
+            
+          </div>
+        </li>
+    </ul>
+</div>

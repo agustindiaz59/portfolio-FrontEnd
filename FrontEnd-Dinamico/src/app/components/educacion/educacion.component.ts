@@ -2,14 +2,12 @@ import { Component } from '@angular/core';
 import { CommonService } from 'src/app/services/common.service';
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css']
+  selector: 'app-educacion',
+  templateUrl: './educacion.component.html',
+  styleUrls: ['./educacion.component.css']
 })
-export class SkillsComponent {
-
+export class EducacionComponent {
   miPortafolio: any ;
-  porcentaje: any;
   
   constructor( private common:CommonService,){
   }
@@ -21,5 +19,5 @@ export class SkillsComponent {
         this.miPortafolio = data;
       }
     );
-  }
-};
+  };
+}

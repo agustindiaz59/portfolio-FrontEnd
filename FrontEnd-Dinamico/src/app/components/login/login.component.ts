@@ -1,5 +1,7 @@
+import { STRING_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,7 @@ import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 export class LoginComponent{
   form:FormGroup;
 
-  constructor(private formBuilder:FormBuilder){
+  constructor(private formBuilder:FormBuilder,private auth:AuthService){
     this.form=this.formBuilder.group({
       email:["", [Validators.required, Validators.email]],
       password:["", [Validators.required,Validators.minLength(8)]],
@@ -30,7 +32,6 @@ export class LoginComponent{
   get MailValid(){
     return false;
   }
-  
   onEnviar(event:Event){
     event.preventDefault;
     if(this.form.valid){
@@ -40,5 +41,9 @@ export class LoginComponent{
       alert("ups algun dato salio mal");
       this.form.markAllAsTouched;
     }
+  }
+
+  Login(){
+    this.auth.login(this.Email,this.Password);
   }
 }

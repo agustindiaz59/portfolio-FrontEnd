@@ -3,15 +3,15 @@
 
     <!--foto de portada-->
     <div>
-        <img class="card-img-top" [src]="miPortafolio.backImage" alt="banner">
+        <img class="card-img-top" [src]="miPortafolio.Persona[0].banner" alt="banner">
     </div>
 
     <!--foto de perfil-->
     <div id="foto-de-perfil" class="d-flex align-items-end">
 
-        <img style="width: 100%; border-radius: 50%;" [src]="miPortafolio.profileImage" alt="foto_de_perfil">
+        <img style="width: 100%; border-radius: 50%;" [src]="miPortafolio.Persona[0].image_perfil" alt="foto_de_perfil">
         <a href="#">
-          <img style="width: 30px;" [src]="miPortafolio.edit" alt="edicion">
+          <img style="width: 30px;" src="../assets/edicion.png" alt="edicion">
         </a>
         
     </div>
@@ -21,17 +21,18 @@
       <div class="row">
 
         <div style="text-align: left;" class="col">
-          <h1>{{miPortafolio.nombre}}</h1>
-          <p>{{miPortafolio.orientacion}}<br>
-            {{miPortafolio.ubicacion}}
-            <a href="#">info de contacto</a>
+          <h1>{{miPortafolio.Persona[0].nombres}} {{miPortafolio.Persona[0].apellido}}</h1>
+          <p>{{miPortafolio.Persona[0].info}}<br>
+            {{miPortafolio.Persona[0].ubicacion}}
           </p>
         </div>
 
         <div style="text-align: right;" class="col">
             <ul id="listas">
-              <li><!--insertar foto-->{{miPortafolio.institucion}}</li>
-              <li><!--insertar foto-->INTI</li>
+              <li *ngFor="let var of miPortafolio.education,let i = index">
+                <!--opcionalmente insertar foto-->
+                {{miPortafolio.education[i].escuela}}
+              </li>
             </ul>
         </div>
 
@@ -39,11 +40,10 @@
     </div>
 
     <!--botones de intereses-->
-    <div class="row">
-        <div style="margin: 5px 0 5px 5px;" class="col">
-          <button class="btn btn-primary">Tengo interes en:</button>
-          <button class="btn btn-light">Añadir seccion</button>
-          <button class="btn btn-light">Más</button>
-        </div>
-    </div>
+    <!--  <div class="row">
+            <div style="margin: 5px 0 5px 5px;" class="col">
+              <button class="btn btn-primary">Tengo interes en:</button>
+              <button class="btn btn-light">Añadir seccion</button>
+            </div>
+        </div>-->
 </header>

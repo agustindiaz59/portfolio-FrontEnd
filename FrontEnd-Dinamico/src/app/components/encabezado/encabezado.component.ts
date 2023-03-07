@@ -7,7 +7,6 @@ import { CommonService } from 'src/app/services/common.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit{
-
   miPortafolio: any ;
 
   constructor( private common:CommonService, ){}
