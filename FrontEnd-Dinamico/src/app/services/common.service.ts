@@ -1,17 +1,19 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpResponse, HttpResponseBase } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CommonService {
+export class CommonService{
+  private url = "https://portfolio-api-77bt.onrender.com/datos";
+  private json ="";
 
   constructor(private http:HttpClient) { 
     
   }
   
   obtenerDatos():Observable<any>{
-    return this.http.get('./assets/data/data.json')
+    return this.http.get(this.url) //  ./assets/data/data.json
   }
 }

@@ -3,13 +3,13 @@
 
     <!--foto de portada-->
     <div>
-        <img class="card-img-top" [src]="miPortafolio.Persona[0].banner" alt="banner">
+        <img class="card-img-top" [src]="miPortafolio.persona.banner" alt="banner">
     </div>
 
     <!--foto de perfil-->
     <div id="foto-de-perfil" class="d-flex align-items-end">
 
-        <img style="width: 100%; border-radius: 50%;" [src]="miPortafolio.Persona[0].image_perfil" alt="foto_de_perfil">
+        <img style="width: 100%; border-radius: 50%;" [src]="miPortafolio.persona.image_perfil" alt="foto_de_perfil">
         <a href="#">
           <img style="width: 30px;" src="../assets/edicion.png" alt="edicion">
         </a>
@@ -21,19 +21,10 @@
       <div class="row">
 
         <div style="text-align: left;" class="col">
-          <h1>{{miPortafolio.Persona[0].nombres}} {{miPortafolio.Persona[0].apellido}}</h1>
-          <p>{{miPortafolio.Persona[0].info}}<br>
-            {{miPortafolio.Persona[0].ubicacion}}
+          <h1>{{miPortafolio.persona.nombre}} {{miPortafolio.persona.apellido}}</h1>
+          <p>{{miPortafolio.persona.info}}<br>
+            {{miPortafolio.persona.ubicacion}}
           </p>
-        </div>
-
-        <div style="text-align: right;" class="col">
-            <ul id="listas">
-              <li *ngFor="let var of miPortafolio.education,let i = index">
-                <!--opcionalmente insertar foto-->
-                {{miPortafolio.education[i].escuela}}
-              </li>
-            </ul>
         </div>
 
       </div>

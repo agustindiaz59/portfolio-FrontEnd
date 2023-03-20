@@ -1,5 +1,5 @@
 {      
-    "Persona": [
+    "persona":
         {
             "id": "1",
             "nombres": "Matias Agustin",
@@ -14,8 +14,7 @@
             "banner": "../assets/banner.jpg",
             "image_perfil": "../assets/foto_de_perfil.jpg",
             "ubicacion":"Bella Vista, Tucuman (Argentina)"
-        }
-    ],
+        },
     "trabajos":[
         {
             "titulo":"Fullstack developer",
