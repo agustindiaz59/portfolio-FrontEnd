@@ -20,7 +20,7 @@
 
             <div class="mb-3">
               <label for="password" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" formControlName="password" [class.border-danger]="MailValid">
+              <input type="password" class="form-control" formControlName="contraseña" [class.border-danger]="MailValid">
             </div>
 
             <div *ngIf="Password?.errors && Password?.touched">
@@ -28,7 +28,7 @@
                 Debe ingresar una contraseña
               </p>
               <p *ngIf="Password?.hasError('minlength')">
-                El password debe ser de 8 o más caracteres.
+                La contraseña debe ser de 8 o más caracteres.
               </p>
             </div>
 

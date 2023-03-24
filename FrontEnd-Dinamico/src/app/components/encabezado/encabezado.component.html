@@ -10,7 +10,7 @@
     <div id="foto-de-perfil" class="d-flex align-items-end">
 
         <img style="width: 100%; border-radius: 50%;" [src]="miPortafolio.persona.image_perfil" alt="foto_de_perfil">
-        <a href="#">
+        <a href="#" *ngIf="auth.logIn()">
           <img style="width: 30px;" src="../assets/edicion.png" alt="edicion">
         </a>
         
@@ -29,12 +29,4 @@
 
       </div>
     </div>
-
-    <!--botones de intereses-->
-    <!--  <div class="row">
-            <div style="margin: 5px 0 5px 5px;" class="col">
-              <button class="btn btn-primary">Tengo interes en:</button>
-              <button class="btn btn-light">Añadir seccion</button>
-            </div>
-        </div>-->
 </header>

@@ -17,7 +17,6 @@ export class SkillsComponent {
   ngOnInit():void{
     this.common.obtenerDatos().subscribe(data =>
       {
-        console.log(data);
         this.miPortafolio = data;
       }
     );

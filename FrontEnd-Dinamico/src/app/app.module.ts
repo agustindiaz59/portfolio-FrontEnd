@@ -21,6 +21,7 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { AuthService } from './services/auth.service';
 import { CommonService } from './services/common.service';
 import { EdicionComponent } from './components/edicion/edicion.component';
+import { AddComponent } from './components/add/add.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { EdicionComponent } from './components/edicion/edicion.component';
     SkillsComponent,
     ConocimientosComponent,
     EducacionComponent,
-    EdicionComponent
+    EdicionComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,

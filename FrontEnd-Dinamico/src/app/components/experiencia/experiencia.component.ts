@@ -16,7 +16,6 @@ export class ExperienciaComponent {
   ngOnInit():void{
     this.common.obtenerDatos().subscribe(data =>
       {
-        console.log(data);
         this.miPortafolio = data;
       }
     );

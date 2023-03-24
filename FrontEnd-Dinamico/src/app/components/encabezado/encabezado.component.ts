@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 import { CommonService } from 'src/app/services/common.service';
 
 @Component({
@@ -9,12 +10,11 @@ import { CommonService } from 'src/app/services/common.service';
 export class EncabezadoComponent implements OnInit{
   miPortafolio: any ;
 
-  constructor( private common:CommonService, ){}
+  constructor( private common:CommonService, protected auth:AuthService){}
 
   ngOnInit():void{
     this.common.obtenerDatos().subscribe(data =>
       {
-        console.log(data);
         this.miPortafolio = data;
       }
     );

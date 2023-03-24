@@ -1,8 +1,9 @@
-import { STRING_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { HttpClient } from '@angular/common/http';
+import { PortfolioComponent } from '../portfolio/portfolio.component';
 
 @Component({
   selector: 'app-login',
@@ -12,10 +13,10 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent{
   form:FormGroup;
 
-  constructor(private formBuilder:FormBuilder,private auth:AuthService,private ruta:Router){
+  constructor(private formBuilder:FormBuilder,private auth:AuthService,private ruta:Router,private http:HttpClient){
     this.form=this.formBuilder.group({
       email:["", [Validators.required, Validators.email]],
-      password:["", [Validators.required,Validators.minLength(8)]],
+      contraseña:["", [Validators.required,Validators.minLength(8)]],
     })
   }
   get Email(){
@@ -35,12 +36,15 @@ export class LoginComponent{
   }
   onEnviar(event:Event){
     event.preventDefault;
-    this.auth.iniciarSesion(this.form.value);
 
     if(this.form.valid){
       //llamar servicio a base de datos
-      alert("Formulario Valido");
-      
+      console.log("Datos tomados");
+      this.auth.iniciarSesion(this.form.value).subscribe(data=>{
+        console.log("data: "+ JSON.stringify(data));
+        this.ruta.navigate(['/inicio']);
+        sessionStorage.setItem('auth_token',data.token)
+      })
     }else{
       alert("ups algun dato salio mal");
       this.form.markAllAsTouched;
@@ -48,6 +52,6 @@ export class LoginComponent{
   }
 
   Login(){
-    this.auth.login(this.Email,this.Password);
+    this.auth.iniciarSesion(this.form.value);
   }
 }

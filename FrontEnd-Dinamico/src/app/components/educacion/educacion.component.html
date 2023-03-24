@@ -5,9 +5,7 @@
           <h1>Educacion</h1>
         </div>
         <div id="boton-agregar" class="col">
-          <a href="#">
-            <img style="width: 30px;" src="../assets/plus-lg.svg" alt="add">
-          </a>
+          <app-add></app-add>
         </div>
     </div>
     
@@ -16,7 +14,7 @@
         <li *ngFor="let num of miPortafolio.educacion;let i = index">
           <div class="row">
 
-            <div class="col-1">
+            <div *ngIf="this.eduImagen()" class="col-1">
               <img src="../assets/plus-lg.svg" alt="fotoescuela">
             </div>
 

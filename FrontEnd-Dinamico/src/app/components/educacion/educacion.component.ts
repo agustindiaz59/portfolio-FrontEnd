@@ -11,13 +11,14 @@ export class EducacionComponent {
   
   constructor( private common:CommonService,){
   }
-
   ngOnInit():void{
     this.common.obtenerDatos().subscribe(data =>
       {
-        console.log(data);
         this.miPortafolio = data;
-      }
-    );
+      });
   };
+  eduImagen():boolean{
+    return (this.miPortafolio.educacion.imagen !== "");
+  }
+  
 }
