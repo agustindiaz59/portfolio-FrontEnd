@@ -6,28 +6,36 @@
         <h1>Experiencia</h1>
       </div>
       <div id="boton-agregar" class="col">
-        <app-add></app-add>
+        <button *ngIf="this.auth.logIn()" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalExperiencia" data-bs-whatever="@mdo">
+          <img style="width: 30px;" src="../assets/plus-lg.svg" alt="add">
+        </button>
       </div>
   </div>
   <!--lista de experiencia-->
   <ul>
-      <li  *ngFor="let elemento of miPortafolio.trabajos; let i = index">
+      <li  *ngFor="let e of miPortafolio.trabajos; let i = index">
         <div class="row">
 
-          <div class="col-1">
-            <!--insertar foto-->
-          </div>
+          <!-- <div *ngIf="e.imagen !== vacio"class="col-1">    Puedo poner imagenes, pero no lo considero necesario para este campo
+            <img [src]="e.imagen" alt="">
+          </div> -->
 
           <div class="col">
-            <h2>{{miPortafolio.trabajos[i].titulo}}</h2>
-            <p>{{miPortafolio.trabajos[i].descripcion}}</p> <!--Aqui podria  sacar el .cuerpo y poner una lista igual a la de trabajos, lo dejo como dos maneras distintas de escribir un json-->
+            <h2>{{e.puesto}}</h2>
+            <p>{{e.empresa}} - {{e.lugar}}</p> 
           </div>
 
           <div id="editar-o-eliminar" class="col">
-            <app-edicion></app-edicion>
+            <a href="#" *ngIf="auth.logIn()">
+              <img style="width: 30px;" src="../assets/edicion.png" alt="edicion">
+            </a>
+            <button type="button" class="btn" *ngIf="auth.logIn()" (click)="borrarExp(e.id)">
+              <img src="../assets/trash3.svg" alt="delete">
+            </button>
           </div>
 
         </div>
       </li>
   </ul>
 </div>
+<app-add-experiencia></app-add-experiencia>

@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "FrontEnd-Dinamico:build:production",
+            "firebaseProject": "portfolio-frontend-275b9",
+            "firebaseHostingSite": "portfolio-frontend-275b9"
+          }
         }
       }
     }

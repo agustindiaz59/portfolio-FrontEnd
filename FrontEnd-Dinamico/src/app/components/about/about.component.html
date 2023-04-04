@@ -18,8 +18,11 @@
         <p>{{miPortafolio.persona.sobre_mi}}</p>
       </div>
       <div id="editar-o-eliminar" class="col">
-        <app-edicion></app-edicion>
+        <button *ngIf="this.auth.logIn()" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalAbout" data-bs-whatever="@mdo">
+          <img style="width: 30px;" src="../../../assets/edicion.png" alt="edit">
+        </button>
       </div>
     </div>
   </div>
 </section>
+<app-edit-about></app-edit-about>

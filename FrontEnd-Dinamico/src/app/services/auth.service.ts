@@ -1,45 +1,46 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { BehaviorSubject,catchError,map, Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  url='https://portfolio-api-77bt.onrender.com/authenticate'; //url de la api
-  currentUser: BehaviorSubject<any>;
-  token: any;
-  resp:any;
-
+  url='https://portfolio-api-77bt.onrender.com/'; //url de la api  http://localhost:8080/  https://portfolio-api-77bt.onrender.com/
 
   constructor(private http:HttpClient,private ruta:Router) {
     console.log("El servicio de autenticacion esta corriendo");
-    this.logOut();
-    this.currentUser=new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')||'{}'))
   }
+
   iniciarSesion(credenciales:any):Observable<any>{
-    return this.http.post(this.url,credenciales).pipe(map(data=>{
-      console.log(credenciales);
-      console.log('data: '+JSON.stringify(data));
+    return this.http.post(this.url + 'authenticate',credenciales).pipe(map(data=>{
       return data;
     }))
   }
 
-
-  //Este metodo conecta a la url de la base de datos, mediante el metodo post a /authenticate 
-  //enviando un json con el email y password, luego se suscribe para esperar un objeto como respuesta (resp)
-  //luego redirecciona a la ruta perfil
-  //luego se guarda el token en el navegador, si la respuesta no tiene un token, este no se guardara al no encontrarse 
-  
-
-  //se borra el token del navegador
   logOut(){
-    sessionStorage.removeItem('auth_token')
+    localStorage.removeItem('auth_token')
   }
-
   //servicio para saber si la sesion existe
   public logIn():boolean{
-    return (sessionStorage.getItem('auth_token') !== null) ? true : false
+    return (localStorage.getItem('auth_token') !== null) ? true : false
+  }
+  persona(){
+    
+  }
+  agregar(cosa:string,valor:any):Observable<Object>{
+    console.log("datos solicitados")
+    return this.http.post(this.url + cosa + '/agregar',valor).pipe(map(data=>{
+      window.location.reload()
+      return data;
+    }));
+  }
+  borrar(cosa:string,id:number):Observable<Object>{
+    console.log(cosa + id)
+    return this.http.delete(this.url + cosa +'/borrar/'+ id).pipe(map(data=>{
+      window.location.reload()
+      return data;
+    }));
   }
 }

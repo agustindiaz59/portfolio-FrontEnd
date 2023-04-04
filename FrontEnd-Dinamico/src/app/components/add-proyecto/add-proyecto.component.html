@@ -1,0 +1,31 @@
+
+<div class="modal fade" id="modalProyecto" tabindex="-1" aria-labelledby="modalLabelProyecto" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalLabelProyecto">Nuevo proyecto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formAdd" (ngSubmit)="this.agregarProyecto()">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nombre:</span>
+                <input type="text" class="form-control" formControlName="nombre" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Link: </span>
+                <input type="text" class="form-control" formControlName="link" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div> 
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Descripcion: </span>
+                <input type="text" class="form-control" formControlName="descripcion" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div> 
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
+              </div>      
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "portfolio-frontend-275b9"
+  },
+  "targets": {
+    "portfolio-frontend-275b9": {
+      "hosting": {
+        "FrontEnd-Dinamico": [
+          "portfolio-frontend-275b9"
+        ]
+      }
+    }
   }
 }

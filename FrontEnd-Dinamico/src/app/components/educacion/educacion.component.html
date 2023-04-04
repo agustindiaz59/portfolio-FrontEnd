@@ -5,29 +5,38 @@
           <h1>Educacion</h1>
         </div>
         <div id="boton-agregar" class="col">
-          <app-add></app-add>
+          <button *ngIf="this.auth.logIn()" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEducacion" data-bs-whatever="@mdo">
+            <img style="width: 30px;" src="../assets/plus-lg.svg" alt="add">
+          </button>
         </div>
     </div>
     
     <!--lista de educacion-->
     <ul>
-        <li *ngFor="let num of miPortafolio.educacion;let i = index">
+        <li *ngFor="let t of miPortafolio.educacion;let i = index">
           <div class="row">
 
-            <div *ngIf="this.eduImagen()" class="col-1">
+            <div *ngIf="this.eduImagen(i)" class="col-1">
               <img src="../assets/plus-lg.svg" alt="fotoescuela">
             </div>
 
             <div class="col">
-              <h2>{{miPortafolio.educacion[i].escuela}}</h2>
-              <p>{{miPortafolio.educacion[i].carrera}} {{miPortafolio.educacion[i].inicio}}-{{miPortafolio.educacion[i].fin}}</p>
+              <h2>{{t.titulo}}</h2>
+              <p>{{t.escuela}} {{"("+t.inicio}}-{{t.fin+")"}}</p>
             </div>
 
             <div id="editar-o-eliminar" class="col">
-              <app-edicion></app-edicion>
+              <a href="#" *ngIf="auth.logIn()">
+                <img style="width: 30px;" src="../assets/edicion.png" alt="edicion">
+              </a>
+              <button type="button" class="btn" *ngIf="auth.logIn()" (click)="borrarEdu(t.id)">
+                <img src="../assets/trash3.svg" alt="delete">
+              </button>
             </div>
             
           </div>
         </li>
     </ul>
 </div>
+
+<app-add-educacion></app-add-educacion>

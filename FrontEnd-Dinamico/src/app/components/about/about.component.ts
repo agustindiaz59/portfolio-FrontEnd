@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 import { CommonService } from 'src/app/services/common.service';
 
 @Component({
@@ -8,17 +9,11 @@ import { CommonService } from 'src/app/services/common.service';
 })
 export class AboutComponent {
 
-  miPortafolio: any ;
+  miPortafolio: any ={};
 
-  constructor( private common:CommonService, ){}
-
-  ngOnInit():void{
-    this.common.obtenerDatos().subscribe(data =>
-      {
-        this.miPortafolio = data;
-      }
-      
-    );
+  constructor( private common:CommonService, protected auth:AuthService){
+    this.common.obtenerDatos().subscribe(data =>{this.miPortafolio = data;});
   }
+
 
 }

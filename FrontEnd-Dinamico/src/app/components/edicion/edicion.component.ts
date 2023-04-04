@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -7,6 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./edicion.component.css']
 })
 export class EdicionComponent {
-  constructor(protected auth:AuthService){
+
+  constructor(protected auth:AuthService,private http:HttpClient){
   }
 }

@@ -6,31 +6,44 @@
       <div class="col">
         <h1>Hard & soft skills</h1>
       </div>
+      <div id="boton-agregar" class="col-1">
+        <button *ngIf="this.auth.logIn()" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalSkills" data-bs-whatever="@mdo">
+          <img style="width: 30px;" src="../assets/plus-lg.svg" alt="add">
+        </button>
+      </div>
     </div>
 
     <ul>
       <!--Progressbar resolucion de problemas-->
       <li>
-        <div class="row justify-content-end">
-          <div class="col">
-            <p>Resolucion de problemas</p>
-          </div>
-        </div>
-
-        <div class="row">
-
-          <div class="col">
-            <div class="progress">
-              <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width:75%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        <div  *ngFor="let s of miPortafolio.skills, let i = index">
+          <div class="row justify-content-end">
+            <div class="col">
+              <p>{{s.nombre_hab}}</p>
             </div>
           </div>
-
-          <div class="col-3">
-            <app-edicion></app-edicion>
+  
+          <div class="row">
+  
+            <div class="col">
+              <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" [ngStyle]="{'width':this.porcen(i)}" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+            <div class="col-3">
+              <a href="#" *ngIf="auth.logIn()">
+                <img style="width: 30px;" src="../assets/edicion.png" alt="edicion">
+              </a>
+              <button type="button" class="btn" *ngIf="auth.logIn()" (click)="borrarSkill(s.id)">
+                <img src="../assets/trash3.svg" alt="delete">
+              </button>
+            </div>
+  
           </div>
-
         </div>
       </li>
     </ul>
   </div>
 </header>
+<app-add-skills></app-add-skills>

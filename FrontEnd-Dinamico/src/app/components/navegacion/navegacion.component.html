@@ -18,8 +18,28 @@
               <a href="https://github.com/agustindiaz59"><img class="social" src="./assets/github.svg" alt="logo_github"></a>
               <a href="https://www.instagram.com/agustindiaz2003/"><img class="social" src="./assets/logo_instagram.svg" alt="logo_instagram"></a>
               <a routerLink="/login" *ngIf="!this.auth.logIn()"><img class="social" src="./assets/login.svg" alt="login"></a>
-              <a routerLink="/inicio" *ngIf="this.auth.logIn()" (click)="this.auth.logOut()"><img class="social" src="../../../assets/door-open-fill.svg" alt="logOut;"></a>
+              <a type="button" class="" data-bs-toggle="modal" data-bs-target="#cerrarSesion" routerLink="/inicio" *ngIf="this.auth.logIn()" >
+                <img class="social" src="../../../assets/door-open-fill.svg" alt="logOut;">
+              </a>
           </span>
       </div>
   </div>
 </nav>
+
+<div class="modal fade" id="cerrarSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Seguro que desea cerrar sesión?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="this.auth.logOut()">Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+</div>

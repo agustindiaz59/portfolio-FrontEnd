@@ -8,30 +8,35 @@
         <h1>Proyectos</h1>
       </div>
       <div id="boton-agregar" class="col">
-        <app-add></app-add>
+        <button *ngIf="this.auth.logIn()" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalProyecto" data-bs-whatever="@mdo">
+          <img style="width: 30px;" src="../assets/plus-lg.svg" alt="add">
+        </button>
       </div>
     </div>
 
     <!--lista de proyectos-->
     <ul>
       <li>
-        <div class="row">
-          <div class="col-1">
-            <!--insertar foto-->
-          </div>
+        <div *ngFor="let p of miPortafolio.proyectos,let i = index" class="row">
           
           <div class="col">
-            <a style="text-decoration: none;" href="#"><h2>Portafolio web estatico</h2></a>
-            <p>Argentina programa #YoProgramo</p>
+            <a style="text-decoration: none;" [href]="p.link"><h2>{{p.nombre}}</h2></a>
+            <p>{{p.descripcion}}</p>
           </div>
 
           <div id="editar-o-eliminar" class="col">
-            <app-edicion></app-edicion>
+            <button type="button" class="btn" *ngIf="auth.logIn()">
+              <img style="width: 30px;" src="../assets/edicion.png" alt="edicion">
+            </button>
+            <button type="button" class="btn" *ngIf="auth.logIn()" (click)="borrarProy(p.id)">
+              <img src="../assets/trash3.svg" alt="delete">
+            </button>
           </div>
-
         </div>
       </li>
     </ul>
     
   </div>
 </header>
+
+<app-add-proyecto></app-add-proyecto>

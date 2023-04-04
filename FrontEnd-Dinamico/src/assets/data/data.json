@@ -35,8 +35,16 @@
     ],
     "skills":[
         {
-            "nombre_hab":"Resolucion de problemas",
-            "porcentaje":"50%"
+            "nombre_hab":"Analisis de sistemas",
+            "porcentaje":"70%"
+        }
+    ],
+    "proyectos":[
+        {   
+            "id":"54",
+            "nombre":"proyecto",
+            "link":"link",
+            "descripcion":"Argentina programa #YoProgramo"
         }
     ]
 }

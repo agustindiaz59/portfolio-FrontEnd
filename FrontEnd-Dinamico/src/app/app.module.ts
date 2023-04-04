@@ -22,6 +22,11 @@ import { AuthService } from './services/auth.service';
 import { CommonService } from './services/common.service';
 import { EdicionComponent } from './components/edicion/edicion.component';
 import { AddComponent } from './components/add/add.component';
+import { AddEducacionComponent } from './components/add-educacion/add-educacion.component';
+import { AddProyectoComponent } from './components/add-proyecto/add-proyecto.component';
+import { AddSkillsComponent } from './components/add-skills/add-skills.component';
+import { AddExperienciaComponent } from './components/add-experiencia/add-experiencia.component';
+import { EditAboutComponent } from './components/edit-about/edit-about.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,12 @@ import { AddComponent } from './components/add/add.component';
     ConocimientosComponent,
     EducacionComponent,
     EdicionComponent,
-    AddComponent
+    AddComponent,
+    AddEducacionComponent,
+    AddProyectoComponent,
+    AddSkillsComponent,
+    AddExperienciaComponent,
+    EditAboutComponent
   ],
   imports: [
     BrowserModule,

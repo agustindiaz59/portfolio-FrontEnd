@@ -1,0 +1,26 @@
+<div class="modal fade" id="modalSkills" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva Skill</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formAdd" (ngSubmit)="this.enviar()">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nombre de Habilidad:</span>
+                <input type="text" class="form-control" formControlName="nombre_hab" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Porcentaje: </span>
+                <input type="text" class="form-control" formControlName="porcentaje" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div> 
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
+              </div>       
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

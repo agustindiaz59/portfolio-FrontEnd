@@ -1,5 +1,6 @@
-<div class="d-flex align-items-center" style="padding: 30px; height: 91vh;">
-    <div style="border-radius: 30px;" class="container-sm card ">
+
+  <div class="d-flex align-items-center" style="padding: 30px; height: 91vh;">
+    <div style="border-radius: 30px;" class="container-sm card">
         <form [formGroup]="form" (ngSubmit)="onEnviar($event)" style="margin: 20px;">
 
             <h2 id="bienvenida" style="margin-bottom: 2vh;">Bienvenido! utilice el usuario y contraseña para continuar al modo edición</h2>
@@ -30,11 +31,6 @@
               <p *ngIf="Password?.hasError('minlength')">
                 La contraseña debe ser de 8 o más caracteres.
               </p>
-            </div>
-
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
             </div>
 
             <button type="submit" class="btn btn-primary">Enviar</button>

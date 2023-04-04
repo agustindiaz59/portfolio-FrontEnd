@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 import { CommonService } from 'src/app/services/common.service';
 
 @Component({
@@ -8,9 +9,10 @@ import { CommonService } from 'src/app/services/common.service';
 })
 export class ExperienciaComponent {
 
-  miPortafolio: any ;
+  miPortafolio: any ={};
+  vacio : string = "";
   
-  constructor( private common:CommonService,){
+  constructor( private common:CommonService,protected auth:AuthService){
   }
 
   ngOnInit():void{
@@ -20,4 +22,9 @@ export class ExperienciaComponent {
       }
     );
   };
+  borrarExp(id:number){
+    if(confirm("Esta seguro de que desea borrar la experiencia?")){
+      this.auth.borrar("trabajo",id).subscribe(data=>{window.location.reload()})
+    }
+  }
 }

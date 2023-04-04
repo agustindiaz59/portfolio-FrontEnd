@@ -1,0 +1,39 @@
+
+<div class="modal fade" id="modalEducacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva Educacion</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formAdd" (ngSubmit)="this.enviar()">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Escuela:</span>
+              <input type="text" class="form-control" formControlName="escuela" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Titulo: </span>
+              <input type="text" class="form-control" formControlName="titulo" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div> 
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Imagen: </span>
+              <input type="text" class="form-control" formControlName="imagen" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Inicio: </span>
+              <input type="text" class="form-control" formControlName="inicio" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Fin: </span>
+              <input type="text" class="form-control" formControlName="fin" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>  
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
+            </div>       
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

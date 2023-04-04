@@ -7,12 +7,10 @@ import { CommonService } from 'src/app/services/common.service';
   templateUrl: './encabezado.component.html',
   styleUrls: ['./encabezado.component.css']
 })
-export class EncabezadoComponent implements OnInit{
-  miPortafolio: any ;
+export class EncabezadoComponent{
+  miPortafolio: any ={};
 
-  constructor( private common:CommonService, protected auth:AuthService){}
-
-  ngOnInit():void{
+  constructor( private common:CommonService, protected auth:AuthService){
     this.common.obtenerDatos().subscribe(data =>
       {
         this.miPortafolio = data;
