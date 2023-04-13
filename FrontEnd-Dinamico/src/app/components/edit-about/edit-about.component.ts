@@ -17,6 +17,10 @@ export class EditAboutComponent {
     });
   }
   enviar(){
-    
+    if(this.formAdd.valid){
+      this.auth.persona("about",this.formAdd.value).subscribe(window.location.reload)
+    }else{
+      alert("Por favor complete todos los campos")
+    }
   }
 }

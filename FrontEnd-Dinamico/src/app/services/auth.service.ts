@@ -22,13 +22,15 @@ export class AuthService {
   logOut(){
     localStorage.removeItem('auth_token')
   }
-  //servicio para saber si la sesion existe
+  //metodo para saber si la sesion existe
   public logIn():boolean{
     return (localStorage.getItem('auth_token') !== null) ? true : false
   }
-  persona(){
-    
+  //Metodo path para edicion parcial de los datos de la persona
+  persona(cosa:string,per:Object):Observable<Object>{
+    return this.http.patch(this.url + "persona/" + cosa,JSON.stringify(per));
   }
+  //Metodo Post para agregar datos en la base de datos
   agregar(cosa:string,valor:any):Observable<Object>{
     console.log("datos solicitados")
     return this.http.post(this.url + cosa + '/agregar',valor).pipe(map(data=>{
@@ -36,6 +38,7 @@ export class AuthService {
       return data;
     }));
   }
+  //Metodo delete para eliminar datos
   borrar(cosa:string,id:number):Observable<Object>{
     console.log(cosa + id)
     return this.http.delete(this.url + cosa +'/borrar/'+ id).pipe(map(data=>{
