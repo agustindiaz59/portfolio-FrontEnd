@@ -4,6 +4,9 @@
         <div class="col">
           <h1>Educacion</h1>
         </div>
+
+        
+        <!--El siguiente boton llama a un modal con id = modalEducacion, el cual muestra la entrada de datos para agregar una educacion-->
         <div id="boton-agregar" class="col">
           <button *ngIf="this.auth.logIn()" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEducacion" data-bs-whatever="@mdo">
             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
@@ -39,5 +42,5 @@
         </li>
     </ul>
 </div>
-
+<!--Aqui esta el modal de add-educacion con el formulario, es importante que este fuera del codigo de todo lo demas-->
 <app-add-educacion></app-add-educacion>

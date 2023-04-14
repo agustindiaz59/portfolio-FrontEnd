@@ -12,17 +12,17 @@ export class AuthService {
   constructor(private http:HttpClient,private ruta:Router) {
     console.log("El servicio de autenticacion esta corriendo");
   }
-
+  //Metodo para enviar credenciales e iniciar sesion en caso que sean correctas
   iniciarSesion(credenciales:any):Observable<any>{
     return this.http.post(this.url + 'authenticate',credenciales).pipe(map(data=>{
       return data;
     }))
   }
-
+  //Metodo para cerrar sesion, removiendo el token del almacenamiento del navegador
   logOut(){
     localStorage.removeItem('auth_token')
   }
-  //metodo para saber si la sesion existe
+  //metodo para saber si la sesion existe, buscando el token del navegador
   public logIn():boolean{
     return (localStorage.getItem('auth_token') !== null) ? true : false
   }
