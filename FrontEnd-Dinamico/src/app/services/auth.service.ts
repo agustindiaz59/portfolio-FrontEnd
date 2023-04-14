@@ -7,7 +7,7 @@ import { map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  url='https://portfolio-api-77bt.onrender.com/'; //url de la api  http://localhost:8080/  https://portfolio-api-77bt.onrender.com/
+  url='http://localhost:8080/'; //url de la api  http://localhost:8080/
 
   constructor(private http:HttpClient,private ruta:Router) {
     console.log("El servicio de autenticacion esta corriendo");
