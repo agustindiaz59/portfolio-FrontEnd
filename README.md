@@ -2,7 +2,7 @@ Repositorio FrontEnd para argentina programa
 
 Buenas! aqui se encuentra el FrontEnd que hice para #YoProgramo. El mismo integra HTML, CSS, JSON, Angular y Typescript en el caso del maquetado dinamico, tambien agregué relase de las versiones estables de mi portfolio.
 
-Quiero destacar que en el marco de este curso encontraran muchos diseños mas creativos, sin embargo me adheri al diseño propuesto en la guia del trabajo para concentrarme mas que nada a incluir todas las funcionalidades expuestas durante el cursado y a la optimizacion y reutilizacion del codigo.
+Quiero destacar que en el marco de este curso encontraran muchos diseños mas creativos, sin embargo me adheri al diseño propuesto en la guia del trabajo para concentrarme mas que nada a incluir todas las funcionalidades expuestas durante el cursado y a la optimizacion y reutilizacion del codigo, tambien colaboramos con unos compañeros de cursada para completar el proyecto.
 
 -------IMPORTANTE------- 
 
