@@ -5,6 +5,7 @@
     font-size: 14px;
     padding-top: 15vh;
     color: #333;
+    min-height: 100vh;
   }
   .login-container {
     width: 400px;
@@ -32,7 +33,7 @@
     box-sizing: border-box;
   }
   input[type="submit"] {
-    background-color: #333;
+    background-color: #4CAF50;
     color: #fff;
     border: none;
     padding: 10px 20px;

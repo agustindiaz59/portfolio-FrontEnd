@@ -18,7 +18,7 @@ export class EditAboutComponent {
   }
   enviar(){
     if(this.formAdd.valid){
-      this.auth.persona("about",this.formAdd.value).subscribe(window.location.reload)
+      this.auth.persona("about",this.formAdd.value).subscribe(data =>{window.location.reload()})
     }else{
       alert("Por favor complete todos los campos")
     }

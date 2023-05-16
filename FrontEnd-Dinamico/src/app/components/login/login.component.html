@@ -1,39 +1,11 @@
-
-  <div class="d-flex align-items-center" style="padding: 30px; height: 91vh;">
-    <div style="border-radius: 30px;" class="container-sm card">
-        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" style="margin: 20px;">
-
-            <h2 id="bienvenida" style="margin-bottom: 2vh;">Bienvenido! utilice el usuario y contraseña para continuar al modo edición</h2>
-
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp">
-            </div>
-
-            <div *ngIf="Email?.errors&&Email?.touched">
-              <p *ngIf="Email?.hasError('required')">
-                El email es requerido
-              </p>
-              <p *ngIf="Email?.hasError('email')">
-                El formato es invalido
-              </p>
-            </div>
-
-            <div class="mb-3">
-              <label for="password" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" formControlName="contraseña" [class.border-danger]="MailValid">
-            </div>
-
-            <div *ngIf="Password?.errors && Password?.touched">
-              <p *ngIf="Password?.hasError('required')">
-                Debe ingresar una contraseña
-              </p>
-              <p *ngIf="Password?.hasError('minlength')">
-                La contraseña debe ser de 8 o más caracteres.
-              </p>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-    </div>
-</div>
+<body>
+  <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <h1>Inicio de sesión</h1>
+    <label for="username">Nombre de usuario:</label>
+    <input type="text" id="username" name="username" formControlName="email">
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" formControlName="contraseña">
+    <p>No tiene usuario? cree uno nuevo <a routerLink="/crear-usuario" style="text-decoration: none;">aqui</a></p>
+    <input type="submit" value="Iniciar sesión">
+  </form>
+</body>

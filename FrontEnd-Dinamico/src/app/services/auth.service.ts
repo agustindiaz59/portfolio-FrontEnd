@@ -7,7 +7,7 @@ import { map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  url='http://localhost:8080/'; //url de la api  http://localhost:8080/
+  url='https://portfolio-api-77bt.onrender.com/'; //url de la api  http://localhost:8080/
 
   constructor(private http:HttpClient,private ruta:Router) {
     console.log("El servicio de autenticacion esta corriendo");
@@ -28,7 +28,7 @@ export class AuthService {
   }
   //Metodo path para edicion parcial de los datos de la persona
   persona(cosa:string,per:Object):Observable<Object>{
-    return this.http.patch(this.url + "persona/" + cosa,JSON.stringify(per));
+    return this.http.patch(this.url + "persona/" + cosa,per);
   }
   //Metodo Post para agregar datos en la base de datos
   agregar(cosa:string,valor:any):Observable<Object>{
@@ -42,8 +42,13 @@ export class AuthService {
   borrar(cosa:string,id:number):Observable<Object>{
     console.log(cosa + id)
     return this.http.delete(this.url + cosa +'/borrar/'+ id).pipe(map(data=>{
-      window.location.reload()
       return data;
     }));
+  }
+  crearUsuario(usuario:Object):Observable<any>{
+    return this.http.post(this.url + 'registro',usuario)
+  }
+  editar(cosa:string,id:number, valor:any):Observable<any>{
+    return this.http.put(this.url + 'editar/' + cosa + id ,valor);
   }
 }

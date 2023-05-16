@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CommonService{
-  private url = './assets/data/data.json'; //aqui va la url de la api que devuelve los datos, en este caso uso un json con el mismo formato que los datos que devuelve la api
+  private url = 'https://portfolio-api-77bt.onrender.com/datos'; //aqui va la url de la api que devuelve los datos, en este caso uso un json con el mismo formato que los datos que devuelve la api
 
   constructor(private http:HttpClient) {}
 

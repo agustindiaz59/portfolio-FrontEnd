@@ -18,21 +18,6 @@ export class LoginComponent{
       contraseña:["", [Validators.required,Validators.minLength(8)]],
     })
   }
-  get Email(){
-    return this.form.get("email")
-  }
-  get Password(){
-    return this.form.get("password")
-  }
-  get EmailValid(){
-    return false
-  }
-  get PasswordValid(){
-    return this.Password?.touched && !this.Password.valid;
-  }
-  get MailValid(){
-    return false;
-  }
   onEnviar(event:Event){
     event.preventDefault;
 
